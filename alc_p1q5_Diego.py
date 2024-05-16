@@ -5,7 +5,7 @@ def inversa_eliminacao(A):
     n = len(A)
     for i in range(n):
         if int(A[i,i]) == 0:
-            Exception("Elemento nulo encontrado na diagonal, sugiro trocar de método.")
+            raise Exception("Elemento nulo encontrado na diagonal, sugiro trocar de método.")
     Ainv = np.eye(n)
     aumentada = [[] for i  in range(n)]
     for i in range(n):
@@ -26,6 +26,9 @@ def inversa_eliminacao(A):
             # Essa linha deixou de ter pivot na diagonal principal
             # força ela a ter pivot novamente:
             k = aumentada[j,j]
+            if -1e-10<= k <= 1e-10: 
+                print(f'divisor={k}')
+                raise Exception("Elemento nulo encontrado no pivoteamento da diagonal, matriz não invertível.")
             aumentada[j,:] = aumentada[j,:]/k
     Ainv = aumentada[:,n:]
     return Ainv
@@ -46,5 +49,12 @@ print()
 A = np.array([[2,3,0],
               [4,1,6],
               [1,2,8]])
+print(np.linalg.inv(A))
+print(inversa_eliminacao(A))
+
+print()
+A = np.array([[1,2,3],
+              [4,5,6],
+              [7,8,9]])
 print(np.linalg.inv(A))
 print(inversa_eliminacao(A))
