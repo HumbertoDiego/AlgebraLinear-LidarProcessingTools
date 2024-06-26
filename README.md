@@ -5,5 +5,5 @@ Papiros de Algebra Linear Computacional
 ### 2. Implementação do checagem da ortogonalidade de uma matriz [ortho_check.py](https://github.com/HumbertoDiego/alc-diego/blob/main/ortho_check.py).
 ### 3. Implementação do produto vetorial [cross_prod.py](https://github.com/HumbertoDiego/alc-diego/blob/main/cross_prod.py).
 ### 4. Implementação da construção e análise da matriz de Wilkinson bidiagonal [wilkinson.py](https://github.com/HumbertoDiego/alc-diego/blob/main/wilkinson.py).
-
+### 5. Implementação da eliminação gaussiana com pivoteamento parcial para decomposição LU [lu_decomp.py](https://github.com/HumbertoDiego/alc-diego/blob/main/lu_decomp.py).
 
