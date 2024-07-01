@@ -7,3 +7,5 @@ Papiros de Algebra Linear Computacional
 ### 4. Implementação da construção e análise da matriz de Wilkinson bidiagonal [wilkinson.py](https://github.com/HumbertoDiego/alc-diego/blob/main/wilkinson.py).
 ### 5. Implementação da eliminação gaussiana com pivoteamento parcial para decomposição LU [lu_decomp.py](https://github.com/HumbertoDiego/alc-diego/blob/main/lu_decomp.py).
 ### 6. Implementação do algoritimo de Gran-Schmidt modificado para decomposição QR [mod_qr_grsch.py](https://github.com/HumbertoDiego/alc-diego/blob/main/mod_qr_grsch.py).
+### 7. Implementação da compressão por truncamento da decomposição SVD [svd_compression.py](https://github.com/HumbertoDiego/alc-diego/blob/main/svd_compression.py).
+
