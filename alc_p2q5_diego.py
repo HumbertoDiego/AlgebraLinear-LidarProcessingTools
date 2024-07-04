@@ -50,5 +50,5 @@ print(np.allclose(R.T @ R, A))
 #      [2 ,1 ,10]]
 # B = np.array(B)
 # R = alc_cholesky(B)
-# if R:
-#     print("B=R^T @ R ?", np.allclose(R.T @ R, B))
+# print("[B]=[R].T [R]:")
+# print(np.allclose(R.T @ R, B))
