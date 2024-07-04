@@ -5,7 +5,10 @@ def alc_cholesky(A):
     # using the Cholesky decomposition algorithm.
     # If the algorithm fails, A is not positive definite.
     # Output an error message and return and empty array R.
-    n = len(A)
+    A = np.array(A,dtype=float)
+    n,m = A.shape
+    if m!=n:
+        raise Exception("O algoritmo de cholesky só funciona com matrizes quadradas.")
     R = np.zeros((n,n))
     for i in range(n):
         soma = 0
@@ -32,11 +35,13 @@ A = [[1 , 1, 4,-1],
      [-1,-1,-4,10]]
 A = np.array(A)
 R = alc_cholesky(A)
-print("A=R^T @ R ?", np.allclose(R.T @ R, A))
+print("[A]=[R].T [R]:")
+print(np.allclose(R.T @ R, A))
 
 # print("Cholesky Decomposition via np.linalg.cholesky: ")
 # L = np.linalg.cholesky(A)
-# print("A=L @ L^T ?", np.allclose(L @ L.T, A))
+# print("[A]=[L] [L].T:")
+# print(np.allclose(L @ L.T, A))
 
 ## test error messga
 # print("\nTest error message:")
