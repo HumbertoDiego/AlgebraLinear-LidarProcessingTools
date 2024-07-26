@@ -8,4 +8,5 @@ Papiros de Algebra Linear Computacional e Processamento LiDAR
 ### 5. Implementação da eliminação gaussiana com pivoteamento parcial para decomposição LU [lu_decomp.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/lu_decomp.py).
 ### 6. Implementação do algoritimo de Gran-Schmidt modificado para decomposição QR [mod_qr_grsch.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/mod_qr_grsch.py).
 ### 7. Implementação da compressão por truncamento da decomposição SVD [svd_compression.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/svd_compression.py).
+### 8. Implementação do algoritimo de cholesky para decomposição de uma matriz difinida positiva (A) tal que ($R^T R = A$) [Cholesky_Decomposition.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/Cholesky_Decomposition.py).
 
