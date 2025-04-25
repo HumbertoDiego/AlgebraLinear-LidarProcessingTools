@@ -1,3 +1,4 @@
+"""Teste da ortogonalidade de uma matriz quadrada."""
 import numpy as np
 
 P1 = [[-0.40825 , 0.43644 , 0.80178 ],
@@ -19,6 +20,7 @@ P2 = [[-0.47624 , -0.4264  ,0.30151] ,
 """
 
 def is_orthogonal_by_definition(P, tol = 1e-04):
+    """Teste da ortogonalidade de uma matriz quadrada caso P.T @ P = I."""
     P = np.array(P)
     if P.shape[0]==P.shape[1]:
         n = P.shape[0]
@@ -36,6 +38,8 @@ def is_orthogonal_by_definition(P, tol = 1e-04):
     return flag
 
 def is_orthogonal_by_vectors(P, tol = 1e-04):
+    """Check if the columns of P are orthogonal to each other and have unit 
+    length."""
     P = np.array(P)
     if P.shape[0]==P.shape[1]:
         n = P.shape[0]

@@ -1,16 +1,15 @@
+"""Algoritmo de decomposição LU (Lower-Upper) da matriz quadrada A."""
+
 import numpy as np
 from scipy.linalg import lu
 
 def ludecomp(A):
     """
     LU decomposition using Gaussian elimination with partial pivoting. 
-    [P U P interchanges] = ludecomp(A) factors a square
-    matrix so that PA = LU. U is an upper-triangular matrix,
-    L is a lower-triangular matrix, and P is a permutation
-    matrix that reflects the row exchanges required by
-    partial pivoting used to reduce round-off error.
-    In the event that is useful, interchanges is the number
-    of row interchanges required.
+    [P U P interchanges] = ludecomp(A) factors a square matrix so that PA = LU.
+    U is an upper-triangular matrix, L is a lower-triangular matrix, and P is a
+    permutation matrix that reflects the row exchanges required by partial 
+    pivoting used.
     """
     A = A.astype(float)
     n = A.shape[0]

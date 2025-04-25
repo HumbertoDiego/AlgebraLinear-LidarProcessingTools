@@ -1,3 +1,7 @@
+"""
+Constrói e analisa uma matriz de Wilkinsin bidiagonal quanto ao aumento de sua 
+ordem e o número de condição.
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
