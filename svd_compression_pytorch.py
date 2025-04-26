@@ -4,13 +4,14 @@ Implementação da compressão de uma matriz por truncamento da decomposição S
 import sys
 import imageio
 import numpy as np
+import torch
 import matplotlib.pyplot as plt
 
 def svdcompression(img_channel, k_stop=10):
-    U, S, Vt = np.linalg.svd(img_channel, full_matrices=True)
-    print(U.shape, S.shape, Vt.shape ) # (1600, 1200) (1200,) (1200, 1200)
-    reconstructed =  np.matrix(U[:, :k_stop]) * np.diag(S[:k_stop]) * np.matrix(Vt[:k_stop, :])
-    return reconstructed
+    U, S, Vt = torch.linalg.svd(img_channel, full_matrices=False)
+    print(U.shape, S.shape, Vt.shape ) # [675, 675] [675]) [675, 1200]
+    reconstructed = U[:, :k_stop] @ torch.diag(S[:k_stop]) @ Vt[:k_stop, :]
+    return reconstructed.numpy()
 
 # Teste um uma imagem
 
@@ -19,9 +20,9 @@ if __name__== "__main__":
     if len(sys.argv) > 1:
         filename = sys.argv[1]
     im = imageio.v3.imread(filename)
-    redchannel = im[:,:,0]
-    greenchannel = im[:,:,1]
-    bluechannel = im[:,:,2]
+    redchannel = torch.tensor(im[:,:,0], dtype=torch.uint8).float()
+    greenchannel = torch.tensor(im[:,:,1], dtype=torch.uint8).float()
+    bluechannel = torch.tensor(im[:,:,2], dtype=torch.uint8).float()
     print(im.shape)
 
     ks = [10,50,100,150]
@@ -41,7 +42,7 @@ if __name__== "__main__":
     fig, axs = plt.subplots(1, 5)
     axs[0].imshow(im)
     axs[0].set_title("Original")
-    for idx,k in enumerate(ks):
+    for idx, k in enumerate(ks):
         axs[idx+1].imshow(recs[idx])
         axs[idx+1].set_title(f"k={k}")
     plt.show()

@@ -11,3 +11,16 @@ Papiros de Algebra Linear Computacional e processamento fotogramétrico
 ### 8. Implementação da compressão por truncamento da decomposição SVD [svd_compression.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/svd_compression.py).
 ### 9. Implementação do algoritimo de cholesky para decomposição de uma matriz difinida positiva (A) tal que ($R^T R = A$) [cholesky_decomposition.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/cholesky_decomposition.py).
 ### 10. Teoria, implementação e prática do algoritimo de fototriangulação pelo método dos modelos independentes [fototri_mmi.ipynb](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/fototri_mmi.ipynb).
+
+
+
+
+<!-- 
+git init
+git remote add origin https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools
+git pull origin main
+# Do and push changes:
+git add * ; git commit -m "general update in comments"; git push -u origin main
+#Pull changes
+git pull origin main
+ -->

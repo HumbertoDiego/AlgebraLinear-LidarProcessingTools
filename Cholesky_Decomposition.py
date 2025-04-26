@@ -1,10 +1,14 @@
+"""
+Implementação da decomposição de cholesyky da matriz A em R, onde A=R.T @ R.
+"""
+
 import numpy as np
 
 def alc_cholesky(A):
-    # Factor the positive definite matrix A
-    # using the Cholesky decomposition algorithm.
-    # If the algorithm fails, A is not positive definite.
-    # Output an error message and return and empty array R.
+    """Factor the positive definite matrix A
+    using the Cholesky decomposition algorithm.
+    If the algorithm fails, A is not positive definite.
+    Output an error message and return and empty array R."""
     A = np.array(A,dtype=float)
     n,m = A.shape
     if m!=n:

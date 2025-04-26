@@ -1,3 +1,4 @@
+"""Implementação do produto vetorial."""
 import numpy as np
 
 def crossprod(u,v):
