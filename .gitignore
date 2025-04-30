@@ -1,0 +1,4 @@
+__pycache__/*.pyc
+data/FOTOS_VOO_2GPTE/
+.ipynb_checkpoints/
+anaconda_projects/
