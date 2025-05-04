@@ -10,10 +10,6 @@ Papiros de Algebra Linear Computacional e processamento fotogramétrico
 ### 7. Implementação do algoritimo de Gran-Schmidt modificado para decomposição QR [mod_qr_grsch.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/mod_qr_grsch.py).
 ### 8. Implementação da compressão por truncamento da decomposição SVD [svd_compression.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/svd_compression.py).
 ### 9. Implementação do algoritimo de cholesky para decomposição de uma matriz difinida positiva (A) tal que ($R^T R = A$) [cholesky_decomposition.py](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/cholesky_decomposition.py).
-### 10. Teoria, implementação e prática do algoritimo de fototriangulação pelo método dos modelos independentes [fototri_mmi.ipynb](https://github.com/HumbertoDiego/AlgebraLinear-LidarProcessingTools/blob/main/fototri_mmi.ipynb).
-
-
-
 
 <!-- 
 git init
